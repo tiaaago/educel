@@ -1,0 +1,399 @@
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    height: 100vh;
+    width: 16%;
+    min-width: 19rem;
+}
+
+.navbarHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+    padding-block: 0.7rem;
+}
+
+.mobileHeaderLeftSide {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbarUserName {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #3E4095;
+}
+
+.navbarContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 1rem;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.btnGroup {
+    width: 100%;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbarContentBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3E4095;
+    width: 100%;
+    height: 3.2rem;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarContentBtn:hover {
+    transform: scale(1.04, 1.04);
+}
+
+.navbarLogoutBtn {
+    font-weight: 700;
+    background-color: rgb(255, 77, 77);
+}
+
+.navbarContentBtnActive {
+    font-weight: 700;
+}
+
+.mobileNavbar {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+}
+
+.openedMobileNavbar {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.mobileNavbarHeader {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+    padding-block: 0.7rem;
+    width: 100%;
+}
+
+.mobileNavbarContent {
+    display: none;
+}
+
+.openedMobileNavbarContent {
+    top: 80px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    align-items: center;
+    padding-inline: 1.5rem;
+    padding-block: 0.7rem;
+    gap: 0.5rem;
+    animation: headerApper 0.7s ease-in-out;
+}
+
+.content {
+    width: 100%;
+}
+
+.contentWrapper {
+    display: flex;
+    height: 100vh;
+    overflow-y: auto;
+    flex-direction: column;
+    padding-inline: 2rem;
+    padding-top: calc(1.8rem + 5rem);
+    gap: 2rem;
+}
+
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contentSectionTitle {
+    font-family: 'Montserrat';
+    color: #3E4095;
+}
+
+.checkboxMenu {
+    position: absolute;
+    opacity: 0;
+}
+
+.label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+.labelSpan {
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 30px;
+    background: #3E4095;
+    transition: 0.25s ease-in-out;
+}
+
+.labelSpan:nth-child(1) {
+    top: 0;
+}
+
+.labelSpan:nth-child(2) {
+    top: 8px;
+}
+
+.labelSpan:nth-child(3) {
+    top: 16px;
+}
+
+.labelSpanActivate:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+.labelSpanActivate:nth-child(2) {
+    opacity: 0;
+}
+
+.labelSpanActivate:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.grayButton {
+    display: flex;
+    padding: 8px 13px;
+    background-color: #D9D9D9;
+    border-radius: 7px;
+    gap: 10px;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter';
+    border: 0px;
+    font-size: 15px;
+}
+
+.blueButton {
+    display: flex;
+    padding: 8px 13px;
+    background-color: #3E4095;
+    border-radius: 7px;
+    gap: 10px;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    font-family: 'Inter';
+    border: 0px;
+    font-size: 15px;
+}
+
+/* MODAL */
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+    max-width: 480px;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    animation: modalAppear 0.2s ease-in-out;
+}
+
+.modalWrapper {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    animation: modalBackgroundAppear 0.3s;
+    overflow: auto;
+}
+
+.modalFixed {
+    align-items: normal;
+}
+
+.modalQuestions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    overflow: auto;
+    scrollbar-width: 0;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.closeModalBtn {
+    background-color: rgb(255, 77, 77);
+    border-radius: 3px;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    font-family: 'Inter';
+    border: 0px;
+    font-size: 15px;
+}
+
+.addModalBtn {
+    background-color: #3E4095;
+    border-radius: 3px;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    font-family: 'Inter';
+    border: 0px;
+    font-size: 15px;
+}
+
+.modalQuestionText {
+    font-family: 'Inter';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #7d7d7d;
+}
+
+.modalQuestionInput {
+    padding: 7px;
+    width: 100%;
+    border: solid black 1px;
+    border-radius: 4px;
+}
+
+.contentSectionWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Chrome, Edge, and Safari */
+.modalQuestions::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* FIM MODAL */
+
+/* REPORT ERRO */
+
+.reportError {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    color: #3E4095;
+    font-size: 3.5rem;
+}
+
+/* REPORT ERRO */
+
+@keyframes headerApper {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 80px;
+    }
+}
+
+@keyframes modalBackgroundAppear {
+    0% {
+        background: transparent;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(6.2px);
+        -webkit-backdrop-filter: blur(6.2px);
+    }
+}
+
+@keyframes modalAppear {
+    0% {
+        transform: scale(0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .mobileNavbar {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .content {
+        top: 0;
+        width: 84%;
+    }
+
+    .contentWrapper {
+        padding-top: 1.8rem;
+        height: 100vh;
+    }
+}

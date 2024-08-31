@@ -1,0 +1,210 @@
+/* HOME */
+
+.widgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.widget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 18rem;
+    gap: 20px;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.widget > i {
+    font-size: 3.5rem;
+}
+
+.widget > h2 {
+    text-align: right;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.widgetBlue {
+    color: white;
+    background-color: #3E4095;
+}
+
+.widgetGray {
+    color: black;
+    background-color: #D9D9D9;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.announcementBox {
+    display: flex;
+    flex-direction: column;
+    background-color: #3E4095;
+    padding: 1rem;
+    border-radius: 7px;
+    gap: 10px;
+}
+
+.tags {
+    display: flex;
+}
+
+.tag {
+    background-color: #ff4d4d;
+    border-radius: 3px;
+    padding: 0.3rem;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+}
+
+.announcementBoxHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.announcementBoxHeaderAvatar {
+    height: 3rem;
+}
+
+.announcementBoxHeaderInfo {
+    color: white;
+    font-weight: 700;
+}
+
+.displayAnnouncementText {
+    color: white;
+    font-family: 'Inter';
+    padding-bottom: 15px;
+    word-wrap: break-word;
+}
+
+.seenBtn {
+    position: relative;
+    bottom: 20px;
+    left: 1rem;
+    background-color: #D9D9D9;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.seenText {
+    font-weight: 600;
+}
+
+.seen {
+    color: #777777;
+}
+
+.notSeenPointer {
+    cursor: pointer;
+}
+
+.loadingMessage {
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 635px) {
+    .widget {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* FIM HOME */
+
+/* AGENDA */
+
+.managementSection {
+    display: flex;
+}
+
+.eventsSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.typeSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.typeHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.typeHeaderTitle {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.typeHeaderArrow {
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.typeHeaderArrow:hover {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.dateBoxes {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.dateBox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dateDisplay {
+    color: white;
+    font-weight: 700;
+    padding: 5px 10px;
+    background-color: #3E4095;
+    border-radius: 5px;
+}
+
+.eventBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: gray;
+    padding: 5px 10px;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+}
+
+.eventName {
+    font-weight: 600;
+}
+
+.eventActions {
+    display: flex;
+    gap: 5px;
+}
+
+/* FIM AGENDA */

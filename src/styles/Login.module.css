@@ -1,0 +1,64 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3E4095;
+}
+
+.loginBox {
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 22rem;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 1rem;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.inputsLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inputLogin {
+    border: solid 1px black;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Inter';
+}
+
+.inputSelect {
+    border: solid 1px black;
+    padding: 9px;
+    border-radius: 5px;
+    font-family: 'Inter';
+}
+
+.btnArea {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.loginBtn {
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    background-color: #3E4095;
+    color: white;
+    border-radius: 7px;
+    border: 0px;
+    font-family: 'Inter';
+    font-size: 16px;
+}
+
+.alternativeText {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
